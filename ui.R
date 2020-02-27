@@ -41,35 +41,38 @@ dashboardPage(skin = "black",
                                             tabPanel("Resultado", ggiraphOutput("statebins",
                                                                                                   height = "640px")),
                                             
-                                            tabPanel("Modelagem",
+                                            tabPanel("Sobre",
                                                      fluidPage(
                                                        column(7,
-                                                              h3("Modelagem"),
-                                                              
-                                                              p("Para modelagem foram testados três algoritmos de Machine Learning. São eles: KNN, Random Forest e XGBoost. 
-                                                              Dentre os modelos testados o modelo XGBoost foi o escolhido por obter uma curva ROC maior em relação aos demais
-                                                              modelos. Os dados utilizados neste trabalho foram obtidos no Kaggle e podem ser encontrados", a("aqui.", href = 'https://www.kaggle.com/sulianova/cardiovascular-disease-dataset#cardio_train.csv'), 
-                                                              "Mais detalhes sobre o modelo utilizado neste aplicativo podem ser encontrados", a("aqui.", href = 'https://www.kaggle.com/jordaoalves/cardio-disease-predition-bonus-shinyapp' ),
-                                                              
-                                                              
-                                                              img(src="Rplot.png", height = 400, width = 650)
-                                                                
-                                                                                )))),
-                                                              
-                                           tabPanel("Sobre",
-                                                     fluidPage(
-                                                       column(7,
-                                                              h4("Sobre o aplicativo:"),
-                                                              p("Foi um trabalho para as disciplinas de Introdução à Modelagem de Big Data e TI na saúde no ano de 2019.2."),
+                                                              h4("O aplicativo:"),
+                                                              p("Foi resultado de um trabalho para as disciplinas de Introdução à Modelagem de Big Data e TI na saúde em 2019.2."),
                                                               p("O aplicativo utiliza Machine Learning para predizer o risco de uma pessoa ter algum problema cardíaco."),
                                                               p("O conjunto de dados utilizado para treinar e validar o modelo foi o 'Cardiovascular Disease dataset' disponível no", a("Kaggle.", href = 'https://www.kaggle.com/' )),
+                                                              br(),
+                                                              h4("Modelo:"),
+                                                              p("Para modelagem foram testados três algoritmos de Machine Learning foram eles: KNN, Random Forest e XGBoost. 
+                                                              Dentre os modelos testados o modelo XGBoost foi o escolhido por obter uma curva ROC maior em relação aos demais
+                                                                modelos." , "Mais detalhes sobre o modelo utilizado nesse aplicativo podem ser encontrados", a("aqui.", href = 'https://www.kaggle.com/jordaoalves/cardio-disease-predition-bonus-shinyapp' )
+                                                                
+                                                              ),
                                                               br(),
                                                               h4("Autor:"),
                                                               p("Jordão de Lima Alves - Graduando em Ciências Atuariais pela UFRN."),
                                                               p(a("www.jordaoalves.xyz", href = 'https://www.jordaoalves.xyz/' )),
                                                               br(),
-                                                              h4("Github do aplicativo:"),
+                                                              h4("Agradecimentos:"),
+                                                              p("Marcus Alexandre Nunes - DEST/UFRN" ),
+                                                              p(a("www.marcusnunes.me", href = 'https://marcusnunes.me/' )),
+                                                              p("Beatriz Stransky Ferreira - DEB/UFRN" ),
+                                                              p("Edgard De Faria Correa - DIMAp/UFRN" ),
+                                                              p("Alexandre Chiavegatto Filho - FSP/USP" ),
+                                                              br(),
+                                                              h4("Github:"),
                                                               p(a("https://github.com/jordaoalves/IA---S2", href = 'https://github.com/jordaoalves/IA---S2' ))
+                                                              
+                                                              
+                                                              
+                                                              
                                                        )))
                                      ),
                                      useShinyjs(), tags$head({tags$style(HTML("
